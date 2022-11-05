@@ -23,7 +23,7 @@ function import_data() {
 import_data
 
 BURIQ () {
-	curl -sS https://raw.githubusercontent.com/kurosewu/permission/main/ip.txt > /root/tmp
+	curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/ip.txt > /root/tmp
 	data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
 	for user in "${data[@]}"; do
 		exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
@@ -38,8 +38,8 @@ BURIQ () {
 	done
 	rm -f /root/tmp
 	MYIP=$(curl -sS ipv4.icanhazip.com)
-	Name=$(curl -sS https://raw.githubusercontent.com/kurosewu/permission/main/ip.txt | grep $MYIP | awk '{print $2}')
-	Isadmin=$(curl -sS https://raw.githubusercontent.com/kurosewu/permission/main/ip.txt | grep $MYIP | awk '{print $5}')
+	Name=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/ip.txt | grep $MYIP | awk '{print $2}')
+	Isadmin=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/ip.txt | grep $MYIP | awk '{print $5}')
 	echo $Name > /usr/local/etc/.$Name.ini
 	CekOne=$(cat /usr/local/etc/.$Name.ini)
 }
@@ -57,7 +57,7 @@ Bloman() {
 
 PERMISSION() {
 	MYIP=$(curl -sS ipv4.icanhazip.com)
-	IZIN=$(curl -sS https://raw.githubusercontent.com/kurosewu/permission/main/ip.txt | awk '{print $4}' | grep $MYIP)
+	IZIN=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/ip.txt | awk '{print $4}' | grep $MYIP)
 	if [ "$MYIP" = "$IZIN" ]; then
 		Bloman
 	else
@@ -1350,7 +1350,7 @@ if [ "$res" = "Expired" ]; then
 	Exp="\e[36mExpired\033[0m"
 	rm -f /home/needupdate > /dev/null 2>&1
 else
-	Exp=$(curl -sS https://raw.githubusercontent.com/kurosewu/permission/main/ip.txt | grep $MYIP | awk '{print $3}')
+	Exp=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/ip.txt | grep $MYIP | awk '{print $3}')
 fi
 
 export RED='\033[0;31m'
@@ -1615,10 +1615,9 @@ case $menuu in
 		echo "   - Admin Control"
 		echo ""
 		echo "   >>> About, Contact & Any Question Script"
-		echo "   - Script Creator          : M Fauzan Romandhoni"
-		echo "   - Facebook                : https://fb.me/zan404"
-		echo "   - Telegram                : https://t.me/zann404"
-		echo "   - WhatsApp                : https://wa.me/6283875176829"
+		echo "   - Script Creator          : free"
+		echo "   - Facebook                : free"
+		echo "   - Telegram                : https://t.me/kuprit"
 		echo ""
 		echo -e "\e[94m ------------------------------------------------------------\e[0m"
 		echo -e "\e[94m==============================================================\e[0m"
