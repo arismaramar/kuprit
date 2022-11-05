@@ -19,7 +19,7 @@ function permit_masuk() {
 		rm -f /root/tmp
 	}
 	MYIP=$(curl -sS ipv4.icanhazip.com)
-	Name=$(curl -sS https://raw.githubusercontent.com/kurosewu/permission/main/ip.txt | grep $MYIP | awk '{print $2}')
+	Name=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/ip.txt | grep $MYIP | awk '{print $2}')
 	echo $Name > /usr/local/etc/.$Name.ini
 	CekOne=$(cat /usr/local/etc/.$Name.ini)
 	Bloman() {
