@@ -1509,6 +1509,7 @@ case $menuu in
 		read -p "Click enter to return to the main menu..."
 		clear
 		menu
+		;;
 	10)
 		clear
 		red="\033[0;32m"
