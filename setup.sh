@@ -58,7 +58,7 @@ function permit_masuk() {
 }
 
 function import_string() {
-	export SCRIPT_URL='https://raw.githubusercontent.com/zahwanugrah/ssc/main'
+	export SCRIPT_URL='https://raw.githubusercontent.com/zahwanugrah/kuprit/ssc/main'
 	export RED="\033[0;31m"
 	export GREEN="\033[0;32m"
 	export YELLOW="\033[0;33m"
