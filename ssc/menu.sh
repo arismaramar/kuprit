@@ -1350,7 +1350,7 @@ if [ "$res" = "Expired" ]; then
 	Exp="\e[36mExpired\033[0m"
 	rm -f /home/needupdate > /dev/null 2>&1
 else
-	Exp=$(curl -sS https://raw.githubusercontent.com/kurosewu/permission/main/ip.txt | grep $MYIP | awk '{print $3}')
+	Exp=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/main/ip.txt | grep $MYIP | awk '{print $3}')
 fi
 
 export RED='\033[0;31m'
