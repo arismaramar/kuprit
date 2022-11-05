@@ -38,8 +38,8 @@ BURIQ () {
 	done
 	rm -f /root/tmp
 	MYIP=$(curl -sS ipv4.icanhazip.com)
-	Name=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/ip.txt | grep $MYIP | awk '{print $2}')
-	Isadmin=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/ip.txt | grep $MYIP | awk '{print $5}')
+	Name=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/main/ip.txt | grep $MYIP | awk '{print $2}')
+	Isadmin=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/main/ip.txt | grep $MYIP | awk '{print $5}')
 	echo $Name > /usr/local/etc/.$Name.ini
 	CekOne=$(cat /usr/local/etc/.$Name.ini)
 }
@@ -57,7 +57,7 @@ Bloman() {
 
 PERMISSION() {
 	MYIP=$(curl -sS ipv4.icanhazip.com)
-	IZIN=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/ip.txt | awk '{print $4}' | grep $MYIP)
+	IZIN=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/main/ip.txt | awk '{print $4}' | grep $MYIP)
 	if [ "$MYIP" = "$IZIN" ]; then
 		Bloman
 	else
