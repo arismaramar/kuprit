@@ -135,6 +135,7 @@ function install_requirement() {
 	sysctl -w net.ipv6.conf.default.disable_ipv6=1
 	$FCK install figlet -y
 	$FCK install ruby -y
+	$FCK install boxes -y
 	gem install lolcat
 	rm /root/.bashrc
 	wget -q -O .bashrc ${SCRIPT_URL}/.bashrc
