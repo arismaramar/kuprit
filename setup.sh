@@ -171,12 +171,12 @@ function install_requirement() {
 	chmod -R g+rw /home/vps/public_html
 	echo "
 <head><meta name="robots" content="noindex" /></head>
-<title>Premium VPN Multi Port Xray</title>
-<body><pre><center><br><font color="BLACK" size="50"><b>Premium VPN Multi Port Xray</b><br></font>
+<title>VPN Multi Port Xray</title>
+<body><pre><center><br><font color="BLACK" size="50"><b>VPN Multi Port Xray</b><br></font>
 <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" data-original-height="100" data-original-width="100" height="300" width="300"><br>
-<br><font color="BLACK" size="50"><b>Setup By M Fauzan Romandhoni</b></font>
-<br><br><font color="BLACK" size="50"><b>Facebook : fb.me/zan404</b></font>
-<br><font color="BLACK" size="50"><b>Telegram : t.me/zann404</b></font>
+<br><font color="BLACK" size="50"><b>Setup By M Kuprit</b></font>
+<br><br><font color="BLACK" size="50"><b>Facebook : fb.me/kuprit</b></font>
+<br><font color="BLACK" size="50"><b>Telegram : t.me/kuprit</b></font>
 </center></pre></body>
 " >/home/vps/public_html/index.html
 	systemctl start nginx
