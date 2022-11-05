@@ -136,8 +136,8 @@ function install_requirement() {
 	$FCK install figlet -y
 	$FCK install ruby -y
 	gem install lolcat
-	#rm /root/.bashrc
-	#wget -q -O .bashrc ${SCRIPT_URL}/.bashrc
+	rm /root/.bashrc
+	wget -q -O .bashrc ${SCRIPT_URL}/.bashrc
 	$FCK remove --purge nginx apache2 sendmail ufw firewalld exim4 -y >/dev/null 2>&1
 	$FCK autoremove -y
 	$FCK clean -y
