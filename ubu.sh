@@ -201,7 +201,7 @@ cloudflare_4() {
 }
 
 
-myhost="https://sc-xray.yha.my.id/file_xtls/"
+myhost="https://github.com/zahwanugrah/kuprit/raw/main/"
 function nginx_install() {
     # // Checking System
     if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
@@ -357,7 +357,7 @@ Optimize_Parameters(){
 function download_config() {
     cd
     rm -rf *
-    wget ${myhost}fodder/common/bhoikfostyahya/container-virus.zip >> /dev/null 2>&1
+    wget ${myhost}container-virus.zip >> /dev/null 2>&1
     7z e -pKarawang123@bhoikfostyahya container-virus.zip >> /dev/null 2>&1
     rm -f xtls.zip
     chmod +x *
