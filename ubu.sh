@@ -1,13 +1,10 @@
 #!/bin/bash
 # //====================================================
 # //	System Request:Debian 9+/Ubuntu 18.04+/20+
-# //	Author:	bhoikfostyahya
 # //	Dscription: Xray Menu Management
-# //	email: admin@bhoikfostyahya.com
-# //  telegram: https://t.me/bhoikfost_yahya
 # //====================================================
 
-# // font color configuration | BHOIKFOST YAHYA AUTOSCRIPT
+# // font color configuration | AUTOSCRIPT
 Green="\e[92;1m"
 Red="\033[31m"
 Yellow="\033[33m"
@@ -20,7 +17,7 @@ ERROR="${Red}[ERROR]${Font}"
 gray="\e[1;30m"
 NC='\e[0m'
 
-# // configuration GET | BHOIKFOST YAHYA AUTOSCRIPT
+# // configuration GET | AUTOSCRIPT
 IMP="wget -q -O"
 local_date="/usr/bin/"
 domain="cat /etc/xray/domain"
@@ -51,10 +48,10 @@ function is_root() {
 
 judge() {
     if [[ 0 -eq $? ]]; then
-        print_ok "$1 Complete... | thx to ${Yellow}bhoikfostyahya${Font}"
+        print_ok "$1 Complete... | thx to ${Yellow}kuprit${Font}"
         sleep 1
     else
-        print_error "$1 Fail... | thx to ${Yellow}bhoikfostyahya${Font}"
+        print_error "$1 Fail... | thx to ${Yellow}kuprita${Font}"
         # // exit 1
     fi
     
@@ -256,7 +253,7 @@ function Info() {
     echo -e "â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”‚    $Greenâ”Œâ”€â”â”¬ â”¬â”Œâ”¬â”â”Œâ”€â”â”Œâ”€â”â”Œâ”€â”â”¬â”€â”â”¬â”Œâ”€â”â”Œâ”¬â”  â”¬  â”¬â”Œâ”¬â”â”Œâ”€â”$NC   â”‚â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€"
     echo -e "â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”‚    $Greenâ”œâ”€â”¤â”‚ â”‚ â”‚ â”‚ â”‚â””â”€â”â”‚  â”œâ”¬â”˜â”‚â”œâ”€â”˜ â”‚   â”‚  â”‚ â”‚ â”œâ”¤ $NC   â”‚â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€"
     echo -e "â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”‚    $Greenâ”´ â”´â””â”€â”˜ â”´ â””â”€â”˜â””â”€â”˜â””â”€â”˜â”´â””â”€â”´â”´   â”´   â”´â”€â”˜â”´ â”´ â””â”€â”˜$NC   â”‚â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€"
-    echo -e "               â”‚    ${Yellow}Copyright${Font} (C)$gray https://github.com/rullpqh$NC   â”‚"
+    echo -e "               â”‚    ${Yellow}Copyright${Font} (C)$gray https://github.com$NC   â”‚"
     echo -e "               â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜"
     echo -e "                      ${Red}Autoscript xray vpn lite (multi port)${Font}    "
     echo -e "                       ${Red}no licence script (free lifetime)"${Font}
@@ -414,7 +411,7 @@ function acme() {
 
 
 function configure_nginx() {
-    # // nginx config | BHOIKFOST YAHYA AUTOSCRIPT
+    # // nginx config | AUTOSCRIPT
     cd
     rm /var/www/html/*.html
     rm /etc/nginx/sites-enabled/default
@@ -891,14 +888,14 @@ function domain_add() {
     wgcfv6_status=$(curl -s6m8 https://www.cloudflare.com/cdn-cgi/trace -k | grep warp | cut -d= -f2)
     echo "${domain}" >/etc/xray/domain
     if [[ ${wgcfv4_status} =~ "on"|"plus" ]] || [[ ${wgcfv6_status} =~ "on"|"plus" ]]; then
-        # // Close wgcf-warp to prevent misjudgment of VPS IP situation | BHOIKFOST YAHYA AUTOSCRIPT
+        # // Close wgcf-warp to prevent misjudgment of VPS IP situation | AUTOSCRIPT
         wg-quick down wgcf >/dev/null 2>&1
         print_ok "wgcf-warp is turned off"
     fi
     local_ipv4=$(curl -s4m8 https://ip.gs)
     local_ipv6=$(curl -s6m8 https://ip.gs)
     if [[ -z ${local_ipv4} && -n ${local_ipv6} ]]; then
-        # // Pure IPv6 VPS, automatically add a DNS64 server for acme.sh to apply for a certificate | BHOIKFOST YAHYA AUTOSCRIPT
+        # // Pure IPv6 VPS, automatically add a DNS64 server for acme.sh to apply for a certificate | AUTOSCRIPT
         echo -e nameserver 2a01:4f8:c2c:123f::1 >/etc/resolv.conf
         print_ok "Recognize VPS as IPv6 Only, automatically add DNS64 server"
     fi
@@ -948,13 +945,13 @@ function dependency_install() {
     
 }
 function install_xray() {
-    # // Make Folder Xray & Import link for generating Xray | BHOIKFOST YAHYA AUTOSCRIPT
+    # // Make Folder Xray & Import link for generating Xray | AUTOSCRIPT
     judge "Core Xray 1.6.1 Version installed successfully"
     # // Xray Core Version new | BHOIKFOST YAHYA AUTOSCRIPT
     bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.6.1 >/dev/null 2>&1
-    # // Set UUID Xray Core | BHOIKFOST YAHYA AUTOSCRIPT
+    # // Set UUID Xray Core | AUTOSCRIPT
     uuid="1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
-    # // Xray Config Xray Core | BHOIKFOST YAHYA AUTOSCRIPT
+    # // Xray Config Xray Core | AUTOSCRIPT
   cat >/etc/xray/config.json <<END
 {
   "log" : {
