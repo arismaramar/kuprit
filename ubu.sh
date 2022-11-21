@@ -1005,7 +1005,7 @@ function install_xray() {
        "streamSettings":{
          "network": "ws",
             "wsSettings": {
-                "path": "/woryfree"
+                "path": "/worryfree"
           }
         }
      },
