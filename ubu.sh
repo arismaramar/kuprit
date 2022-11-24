@@ -500,7 +500,7 @@ location = /vless
 
 # Important:
 # This is the proxy Xray For Vmess Servers
-      location = /vmess
+      location = /worryfree
 {
 proxy_redirect off;
 proxy_pass http://127.0.0.1:14017;
