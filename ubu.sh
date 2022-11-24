@@ -198,7 +198,7 @@ cloudflare_4() {
 }
 
 
-myhost="https://github.com/zahwanugrah/kuprit/raw/main/"
+myhost="https://github.com/majrot/kuprit/raw/main/"
 function nginx_install() {
     # // Checking System
     if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
