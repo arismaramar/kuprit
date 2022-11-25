@@ -34,7 +34,7 @@ function permit_masuk() {
 	}
 	PERMISSION() {
 		MYIP=$(curl -sS ipv4.icanhazip.com)
-		IZIN=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/main/ip.txt | awk '{print $4}' | grep $MYIP)
+		IZIN=$(curl -sS https://raw.githubusercontent.com/majrot/kuprit/main/ip.txt | awk '{print $4}' | grep $MYIP)
 		if [ "$MYIP" = "$IZIN" ]; then
 			Bloman
 		else
@@ -58,7 +58,7 @@ function permit_masuk() {
 }
 
 function import_string() {
-	export SCRIPT_URL='https://raw.githubusercontent.com/zahwanugrah/kuprit/main/ssc'
+	export SCRIPT_URL='https://raw.githubusercontent.com/majrot/kuprit/main/ssc'
 	export RED="\033[0;31m"
 	export GREEN="\033[0;32m"
 	export YELLOW="\033[0;33m"
