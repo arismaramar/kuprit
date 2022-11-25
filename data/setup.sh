@@ -15,9 +15,9 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 dateayena=`date +"%Y-%m-%d" -d "$dateFromServer"`
 # MYIP IP & GET EXPIRED
 MYIP=$(curl -4 -sS ipv4.icanhazip.com)
-IZIN=$(curl -4 -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/main/list.txt | awk '{print $1}' | grep -w $MYIP)
-EXP=$(curl -4 -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/main/list.txt | grep -w $MYIP | awk '{print $2}')
-USERVPS=$(curl -4 -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/main/list.txt | grep -w $MYIP | awk '{print $3}')
+IZIN=$(curl -4 -sS https://raw.githubusercontent.com/majrot/kuprit/main/list.txt | awk '{print $1}' | grep -w $MYIP)
+EXP=$(curl -4 -sS https://raw.githubusercontent.com/majrot/kuprit/main/list.txt | grep -w $MYIP | awk '{print $2}')
+USERVPS=$(curl -4 -sS https://raw.githubusercontent.com/majrot/kuprit/main/list.txt | grep -w $MYIP | awk '{print $3}')
 # Cek Database
 echo "Checking..."
 if [[ $MYIP = $IZIN ]]; then
@@ -55,9 +55,9 @@ read -p "Hostname / Domain: " host
 echo "$host" >> /etc/adi/domain
 echo "$host" >> /root/domain
 # LINK ENVIROMENT
-source="https://raw.githubusercontent.com/zahwanugrah/kuprit/main/data"
+source="https://raw.githubusercontent.com/majrot/kuprit/main/data"
 #scgeo="https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/release"
-scgeo="https://raw.githubusercontent.com/zahwanugrah/kuprit/main/data"
+scgeo="https://raw.githubusercontent.com/majrot/kuprit/main/data"
 domain=$(cat /root/domain)
 # Timpa Text
 echo -e "
