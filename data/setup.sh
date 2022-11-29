@@ -225,7 +225,7 @@ BACA PERATURAN DI BAWAH INI : <br>
 <br>
 <font color="red"><b> *
 * </b></font><br>
-<font color="blue"><b>-{------NETTERZ.MY.ID------}-</font><br>
+<font color="blue"><b>-{------ANGGUN-VPN.MY.ID------}-</font><br>
 <font color="white"><b> *
 * </b></font><br >
 EOF
