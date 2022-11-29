@@ -20,7 +20,7 @@ if [[ $MYIP = $IZIN ]]; then
 	echo -e "${green}IP Diterima...${NC}"
 else
 	echo -e "${red}IP Belum Terdaftar!${NC}";
-	echo "Hubungi @simbah69 Untuk Daftar Premium"
+	echo "Hubungi @arismaramar Untuk Daftar Premium"
 	exit 0
 fi
 # Cek Tanggal
