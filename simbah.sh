@@ -15,16 +15,16 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 dateayena=`date +"%Y-%m-%d" -d "$dateFromServer"`
 # MYIP IP & GET EXPIRED
 MYIP=$(curl -4 -sS ipv4.icanhazip.com)
-IZIN=$(curl -4 -sS https://raw.githubusercontent.com/majrot/kuprit/main/list.txt | awk '{print $1}' | grep -w $MYIP)
-EXP=$(curl -4 -sS https://raw.githubusercontent.com/majrot/kuprit/main/list.txt | grep -w $MYIP | awk '{print $2}')
-USERVPS=$(curl -4 -sS https://raw.githubusercontent.com/majrot/kuprit/main/list.txt | grep -w $MYIP | awk '{print $3}')
+IZIN=$(curl -4 -sS https://raw.githubusercontent.com/arismaramar/kuprit/main/list.txt | awk '{print $1}' | grep -w $MYIP)
+EXP=$(curl -4 -sS https://raw.githubusercontent.com/arismaramar/kuprit/main/list.txt | grep -w $MYIP | awk '{print $2}')
+USERVPS=$(curl -4 -sS https://raw.githubusercontent.com/arismaramar/kuprit/main/list.txt | grep -w $MYIP | awk '{print $3}')
 # Cek Database
 echo "Checking..."
 if [[ $MYIP = $IZIN ]]; then
 	echo -e "${green}IP Diterima...${NC}"
 else
 	echo -e "${red}IP Belum Terdaftar!${NC}";
-	echo "Hubungi @simbah69 Untuk Daftar Premium"
+	echo "Hubungi @arismaramar Untuk Daftar Premium"
 	rm -f setup.sh
 	rm -f simbah.sh
 	exit 0
@@ -43,4 +43,4 @@ else
 fi
 clear
 #sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 &&
-apt update && apt install -y bzip2 gzip coreutils screen curl wget && wget -q https://raw.githubusercontent.com/majrot/kuprit/main/data/setup.sh && chmod +x setup.sh && ./setup.sh
+apt update && apt install -y bzip2 gzip coreutils screen curl wget && wget -q https://raw.githubusercontent.com/arismaramar/kuprit/main/data/setup.sh && chmod +x setup.sh && ./setup.sh
