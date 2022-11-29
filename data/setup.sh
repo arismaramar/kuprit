@@ -15,16 +15,16 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 dateayena=`date +"%Y-%m-%d" -d "$dateFromServer"`
 # MYIP IP & GET EXPIRED
 MYIP=$(curl -4 -sS ipv4.icanhazip.com)
-IZIN=$(curl -4 -sS https://raw.githubusercontent.com/majrot/kuprit/main/list.txt | awk '{print $1}' | grep -w $MYIP)
-EXP=$(curl -4 -sS https://raw.githubusercontent.com/majrot/kuprit/main/list.txt | grep -w $MYIP | awk '{print $2}')
-USERVPS=$(curl -4 -sS https://raw.githubusercontent.com/majrot/kuprit/main/list.txt | grep -w $MYIP | awk '{print $3}')
+IZIN=$(curl -4 -sS https://raw.githubusercontent.com/arismaramar/kuprit/main/list.txt | awk '{print $1}' | grep -w $MYIP)
+EXP=$(curl -4 -sS https://raw.githubusercontent.com/arismaramar/kuprit/main/list.txt | grep -w $MYIP | awk '{print $2}')
+USERVPS=$(curl -4 -sS https://raw.githubusercontent.com/arismaramar/kuprit/main/list.txt | grep -w $MYIP | awk '{print $3}')
 # Cek Database
 echo "Checking..."
 if [[ $MYIP = $IZIN ]]; then
 	echo -e "${green}IP Diterima...${NC}"
 else
 	echo -e "${red}IP Belum Terdaftar!${NC}";
-	echo "Hubungi @simbah69 Untuk Daftar Premium"
+	echo "Hubungi @arismaramar Untuk Daftar Premium"
 	rm -f setup.sh
 	rm -f simbah.sh
 	exit 0
@@ -55,9 +55,9 @@ read -p "Hostname / Domain: " host
 echo "$host" >> /etc/adi/domain
 echo "$host" >> /root/domain
 # LINK ENVIROMENT
-source="https://raw.githubusercontent.com/majrot/kuprit/main/data"
+source="https://raw.githubusercontent.com/arismaramar/kuprit/main/data"
 #scgeo="https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/release"
-scgeo="https://raw.githubusercontent.com/majrot/kuprit/main/data"
+scgeo="https://raw.githubusercontent.com/arismaramar/kuprit/main/data"
 domain=$(cat /root/domain)
 # Timpa Text
 echo -e "
@@ -204,21 +204,22 @@ connect = 127.0.0.1:1194
 END
 cat <<EOF >/etc/issue.net
 <font color="blue"><b>================================</b></font><br>
-<font color="red"><b> TERIMA KASIH TELAH MENGGUNAKAN LAYANAN NETTERZ.MY.ID</b></font><br>
+<font color="red"><b> TERIMA KASIH TELAH MENGGUNAKAN LAYANAN ANGGUN-VPN.MY.ID</b></font><br>
 <font color="blue"><b>================================</b> </font><br>
 BACA PERATURAN DI BAWAH INI : <br>
 <br>
-<font color="green"><b>-DILARANG DDOS</b></font><br>
-<font color="red"><b>- DILARANG MULTI LOGIN</b></font><br>
-<font color="green"><b>- DILARANG UNTUK HAL KRIMINAL</b></font><br>
-<font color="red"><b>- DILARANG BERMAIN GAME PLAYSTATION</b></font><br>
-<font color="green"><b>- DILARANG DOWNLOAD TORRENT</b></font><br>
-<font color="red"><b>- DILARANG SPAMING</b></font> <br>
-<font color="green"><b>- LOGIN SSH MAX 2 DEVICE</b></font><br>
+<strong>[server hosted on website]<strong><br>
+<font color="red" size="50"><b>DILARANG ILLEGAL CONTEN/DDOS/MULTI LOGIN</b></font><br>
+<font color="blue" size="50"><b>MELANGGAR AUTO BANED</b></font><br>
+<font color="blue" size="50"><b>https://t.me/arismaramar</b></font><br>
+<font color="blue" size="50"><b>https://wa.me/+6285365581599</b></font><br>
+## gabung group utk udate config
+<font color="blue" size="50"><b>https://chat.whatsapp.com/BhVLmdLKxfkGsf6zO5vjrD</b></font><br>
+<br>
 <font color="blue"><b>================================</b>
-</font><br> JIKA MELANGGAR RULE DI ATAS <br> AKUN AKAN DI BAN <br>
+</font><br> MELANGGAR  <br> AUTON DI BANED <br>
 <font color="blue"><b>================================</b></font><br>
-<font color="green"><b> NETTERZ.MY.ID  </b></font><br>
+<font color="green"><b> ANGGUN-VPN.MY.ID  </b></font><br>
 <font color="blue"><b> ================================</b></font><br>
 <font color="red"><b> Auto Reboot Server : 05.00 </b></font><br>
 <br>
@@ -369,10 +370,10 @@ Using API......
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=www.netterz.my.id
-organizationalunit=www.netterz.my.id
-commonname=www.netterz.my.id
-email=admin@netterz.my.id
+organization=www.anggun-vpn.my.id
+organizationalunit=www.anggun-vpn.my.id
+commonname=www.anggun-vpn.my.id
+email=arismar.amar@gmail.com
 "
 # Generate
 openssl genrsa -out key.pem 2048
