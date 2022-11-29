@@ -3,7 +3,7 @@ function permit_masuk() {
 	dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 	biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 	BURIQ() {
-		curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/main/ip.txt > /root/tmp
+		curl -sS https://raw.githubusercontent.com/arismaramar/kuprit/main/ip.txt > /root/tmp
 		data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
 		for user in "${data[@]}"; do
 			exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
@@ -19,7 +19,7 @@ function permit_masuk() {
 		rm -f /root/tmp
 	}
 	MYIP=$(curl -sS ipv4.icanhazip.com)
-	Name=$(curl -sS https://raw.githubusercontent.com/zahwanugrah/kuprit/main/ip.txt | grep $MYIP | awk '{print $2}')
+	Name=$(curl -sS https://raw.githubusercontent.com/arismaramar/kuprit/main/ip.txt | grep $MYIP | awk '{print $2}')
 	echo $Name > /usr/local/etc/.$Name.ini
 	CekOne=$(cat /usr/local/etc/.$Name.ini)
 	Bloman() {
@@ -34,7 +34,7 @@ function permit_masuk() {
 	}
 	PERMISSION() {
 		MYIP=$(curl -sS ipv4.icanhazip.com)
-		IZIN=$(curl -sS https://raw.githubusercontent.com/majrot/kuprit/main/ip.txt | awk '{print $4}' | grep $MYIP)
+		IZIN=$(curl -sS https://raw.githubusercontent.com/arismaramar/kuprit/main/ip.txt | awk '{print $4}' | grep $MYIP)
 		if [ "$MYIP" = "$IZIN" ]; then
 			Bloman
 		else
@@ -58,7 +58,7 @@ function permit_masuk() {
 }
 
 function import_string() {
-	export SCRIPT_URL='https://raw.githubusercontent.com/majrot/kuprit/main/ssc'
+	export SCRIPT_URL='https://raw.githubusercontent.com/arismaramar/kuprit/main/ssc'
 	export RED="\033[0;31m"
 	export GREEN="\033[0;32m"
 	export YELLOW="\033[0;33m"
