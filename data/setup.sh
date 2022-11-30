@@ -50,7 +50,7 @@ mkdir /etc/adi;
 mkdir /etc/adi/vmess;
 # Input Domain
 touch /root/domain;
-echo "WAJIB MEMASUKAN DOMAIN YANG SUDAH DIPOINTING"
+echo "PASTIKAN DOMAIN SUDAH DI POINTING DARI ISP KE CLOUDFLARE"
 read -p "Hostname / Domain: " host
 echo "$host" >> /etc/adi/domain
 echo "$host" >> /root/domain
